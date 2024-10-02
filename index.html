@@ -1,25 +1,23 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html lang="">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Video Scrubber</title>
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/app.js"></script>
 </head>
 
 <body>
+  <div style="text-align: center">
+    <label for="fileInput">Select Video Source</label>
+    <input id="fileInput" type="file" name="video_source" onchange="sourceChanged(this.value)">
 
-<div style="text-align: center">
-  <label for="fileInput">Select Video Source</label>
-  <input id="fileInput" type="file" name="video_source" onclick="this.value = null" onchange="sourceChanged(this)">
+    <video id="video_player" width="800" height="400" style="outline: blue 2px solid">
+      Your browser does not support the video tag.
+    </video>
+  </div>
 
-  <video id="video_player" width="800" height="400" style="outline: blue 2px solid">
-    Your browser does not support the video tag.
-  </video>
-</div>
-
+  <script src="js/app.js" type="text/javascript"></script>
 </body>
-
 </html>
